@@ -1,0 +1,24 @@
+In this homework assignment you will be creating the lexical and syntax analyzer for a programming language that will be defined in this assignment. This language will be able to calculate basic mathematic operations and relational operations for integers and floating-point numbers, as well as variables that can be either.
+
+This program should be able to not only recognize the following operations but have a proper evaluation order that conforms to the real-life principles of mathematics for in order operations:
+•	Addition
+•	Subtraction
+•	Multiplication
+•	Division
+•	Module
+•	Less than
+•	Greater than
+•	Equal To
+•	Not Equal To
+•	Assignment
+(There must also be a way to break precedence, this is usually done with the use of parenthesis)
+Each program should have a clear beginning and end as well as a way to separate multiple statements.
+
+Your assignment is 4 fold:
+1.	Define the rules for recognizing all lexemes as their proper token
+2.	Define production rules for implementing the mathematical syntax of operators and operands
+a.	Make sure it conforms to the standard of an LL Grammar
+b.	Make sure it properly enforces the correct precedence rules
+c.	Make sure it is not ambiguous in creating parses
+3.	Write a program that recognizes all tokens in a file
+4.	Write a program or an extension to the above program that determines if the tokens conform to the correct syntax.
