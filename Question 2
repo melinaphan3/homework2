@@ -1,0 +1,38 @@
+1.	Define the rules for recognizing all lexemes as their proper token
+      •	 Dividing the program into valid tokens
+      •	Remove white space characters
+      •	Remove comments
+      •	It provides help in generating error messages by providing row numbers and column numbers
+      
+      The lexical analyzer identifies the error with the help of the automation machine and the grammar of the given language on which it is based like C, C++, and gives row number and column number of the error.
+
+
+2.	Define production rules for implementing the mathematical syntax of operators and operands
+      a.	Make sure it conforms to the standard of an LL Grammar
+      b.	Make sure it properly enforces the correct precedence rules
+      c.	Make sure it is not ambiguous in creating parses
+a. Grammar – 
+      #	Rule		Comment
+      1	E -> E+T	Expression + Term
+      2	E -> E-T	Expression – Term
+      3	E -> T		Some expressions are considered to be terms
+      4	T -> T*P	Term * Power
+      5	T -> T/P	Term / Power
+      6	T -> P		Some terms are considered to be powers
+      7	P -> P^F	Power ^ Factor
+      8	P -> F		Some powers are considered to be factor
+      9	F -> -F		This derivation stands for unary minus
+      10	F -> +F	This derivation stands for unary plus
+      11	F -> a		Factor can be considered to be a constant
+      12	F -> E		Factor can be considered to be an expression in parentheses
+
+b. Operator precedence parser –
+    An operator precedence parser is a bottom-up parser that interprets an operator grammar. This parser is only used for operator grammars. Ambiguous grammars are not allowed in any parser except operator precedence parser.
+    There are two methods for determining what precedence relations should hold between a pair of terminals:
+    1.	Use the conventional associativity and precedence of operator.
+    2.	The second method of selecting operator-precedence relations is first to construct an unambiguous grammar for the language, a grammar that reflects the correct associativity and precedence in its parse trees.
+
+    This parser relies on the following three precedence relations: ⋖, ≐, ⋗
+    a ⋖ b - this means a “yields precedence to” b
+    a ⋗ b - this means a “takes precedence over” b
+    a ≐ b - this means a “has same precedence as” b
